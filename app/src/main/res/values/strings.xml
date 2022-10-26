@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Final Project</string>
+    <string name="image">Image</string>
+    <string name="intro_text_description">Intro</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="image_contentDescription">Image</string>
+    <string name="let_s_get_started_text">Let\'s get Started</string>
+</resources>
