@@ -28,7 +28,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/lets_get_started_text_marginTop"
         android:text="@string/let_s_get_started_text"
         android:textColor="@color/text_color"
         android:textSize="@dimen/lets_get_started_text_size" />
@@ -60,8 +59,9 @@
         android:paddingTop="@dimen/btn_paddingTopBottom"
         android:paddingBottom="@dimen/btn_paddingTopBottom"
         android:text="@string/sign_in"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/btn_text_size" />
+        android:textColor="#616161"
+        android:textSize="@dimen/btn_text_size"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btn_sign_up_intro"
@@ -72,7 +72,6 @@
         android:layout_marginTop="@dimen/intro_screen_sign_up_btn_marginTop"
         android:layout_marginEnd="@dimen/btn_marginStartEnd"
         android:background="@drawable/white_shape_button_rounded"
-        android:foreground="?attr/selectableItemBackground"
         android:gravity="center"
         android:paddingTop="@dimen/btn_paddingTopBottom"
         android:paddingBottom="@dimen/btn_paddingTopBottom"
