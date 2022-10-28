@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
+import com.example.finalproject.Activity.models.User
 import com.example.finalproject.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_signin.*
@@ -39,6 +40,11 @@ class SigninActivity : BaseActivity() {
 
     }
 
+    fun signInSuccess (user: User){
+        hideProgressDialog()
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
 
     private fun setupActionBar() {
 
