@@ -3,7 +3,6 @@ package com.example.finalproject.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.core.view.GravityCompat
 import com.bumptech.glide.Glide
 import com.example.finalproject.Activity.Firebase.FirestoreClass
@@ -56,7 +55,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             .load(user.image)
             .centerCrop()
             .placeholder(R.drawable.ic_user_place_holder)
-            .into(iv_user_image)
+            .into(iv_profile_user_image)
 
         tv_username.text = user.name
     }
