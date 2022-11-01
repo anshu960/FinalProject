@@ -15,14 +15,14 @@ import kotlinx.android.synthetic.main.dialog_progress.*
 open class BaseActivity : AppCompatActivity() {
 
     private var doubleBackToExitPressedOnce = false
-    private lateinit var mProgressDialog:Dialog
+    private lateinit var mProgressDialog: Dialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base)
     }
 
     //Progress Dialog
-    fun showProgressDialog(text: String){
+    fun showProgressDialog(text: String) {
         mProgressDialog = Dialog(this)
 
         mProgressDialog.setContentView(R.layout.dialog_progress)
@@ -33,16 +33,16 @@ open class BaseActivity : AppCompatActivity() {
         mProgressDialog.show()
     }
 
-    fun hideProgressDialog(){
+    fun hideProgressDialog() {
         mProgressDialog.dismiss()
     }
 
-    fun getCurrentUserID(): String{
+    fun getCurrentUserID(): String {
         return FirebaseAuth.getInstance().currentUser!!.uid
     }
 
-    fun doubleBackToExit(){
-        if (doubleBackToExitPressedOnce){
+    fun doubleBackToExit() {
+        if (doubleBackToExitPressedOnce) {
             super.onBackPressed()
             return
         }
@@ -54,11 +54,14 @@ open class BaseActivity : AppCompatActivity() {
             Toast.LENGTH_LONG
         ).show()
 
-        Handler().postDelayed({doubleBackToExitPressedOnce = false},2500)
+        Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 2500)
     }
-    fun showErrorSnackBar(message: String){
-        val snackBar = Snackbar.make(findViewById(android.R.id.content),
-            message, Snackbar.LENGTH_LONG)
+
+    fun showErrorSnackBar(message: String) {
+        val snackBar = Snackbar.make(
+            findViewById(android.R.id.content),
+            message, Snackbar.LENGTH_LONG
+        )
         val snackBarView = snackBar.view
         snackBarView.setBackgroundColor(ContextCompat.getColor(this, R.color.snackbar_error_color))
         snackBar.show()
